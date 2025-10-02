@@ -76,7 +76,10 @@ if __name__ == "__main__":
     
     # Get all column names
     columns = get_column_info(df)
-    print("All columns:", columns)
+    print("All columns:")
+    for x in columns:
+        print(x)
+    print(f"Num columns: {len(columns)}")
     
     # Analyze a specific column (categorical example)
     weather_info = analyze_column_values(df, 'Weather')
