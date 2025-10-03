@@ -1,0 +1,104 @@
+All columns:
+Bike_Type
+Age
+Gender
+Occupation
+Distance_Travelled(km)
+Weather
+Day_of_Week
+Time_of_Day
+Temperature(C)
+Humidity(%)
+Is_Holiday
+Is_Weekend
+Purpose_of_Ride
+Satisfaction_Level(of 5)
+Helmet_Used
+Traffic_Intensity(of 10)
+Road_Condition
+User_Experience
+Num columns: 18
+
+Summary
+--------------------------------------
+
+Bike_Type
+Type : categorical
+bmx, hill, normal, 
+
+Age
+Type : numerical
+min : 18
+max : 70
+
+Gender
+Type : categorical
+Female, Male, Other, 
+
+Occupation
+Type : categorical
+Unemployed, Student, Professional, Retired, 
+
+Distance_Travelled(km)
+Type : numerical
+min : 0.0
+max : 5.0
+
+Weather
+Type : categorical
+cloudy, sunny, rainy, 
+
+Day_of_Week
+Type : categorical
+Saturday, Thursday, Monday, Friday, Sunday, Wednesday, Tuesday, 
+
+Time_of_Day
+Type : categorical
+morning, afternoon, night, evening, 
+
+Temperature(C)
+Type : numerical
+min : 10.0
+max : 35.0
+
+Humidity(%)
+Type : numerical
+min : 30
+max : 90
+
+Is_Holiday
+Type : numerical
+min : False
+max : True
+
+Is_Weekend
+Type : numerical
+min : False
+max : True
+
+Purpose_of_Ride
+Type : categorical
+Leisure, Errands, Exercise, Commute, 
+
+Satisfaction_Level(of 5)
+Type : numerical
+min : 1
+max : 5
+
+Helmet_Used
+Type : numerical
+min : False
+max : True
+
+Traffic_Intensity(of 10)
+Type : numerical
+min : 1
+max : 10
+
+Road_Condition
+Type : categorical
+Poor, Fair, Good, 
+
+User_Experience
+Type : categorical
+Positive, Negative, Neutral, 

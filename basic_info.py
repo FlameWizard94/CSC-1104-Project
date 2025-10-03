@@ -64,10 +64,25 @@ def get_dataset_summary(df):
     Returns:
         dict: Summary of all columns with their possible values or ranges
     """
-    summary = {}
+    '''summary = {}
     for column in df.columns:
         summary[column] = analyze_column_values(df, column)
-    return summary
+    return summary'''
+
+    print('Summary\n--------------------------------------')
+    for name in df.columns:
+        column = analyze_column_values(df, name)
+        print(f'\n{name}\nType : {column['type']}')
+        if 'values' in column.keys():
+            for x in column['values']:
+                print(x, end=', ')
+            print('')
+        else:
+            for x, y in column['range'].items():
+                print(f'{x} : {y}')
+
+
+
 
 # Example usage:
 if __name__ == "__main__":
@@ -79,18 +94,24 @@ if __name__ == "__main__":
     print("All columns:")
     for x in columns:
         print(x)
-    print(f"Num columns: {len(columns)}")
+    print(f"Num columns: {len(columns)}\n")
     
     # Analyze a specific column (categorical example)
-    weather_info = analyze_column_values(df, 'Weather')
-    print("\nWeather column analysis:", weather_info)
-    
-    # Analyze a specific column (numerical example)
-    distance_info = analyze_column_values(df, 'Distance_Travelled(km)')
-    print("\nDistance column analysis:", distance_info)
+    '''weather_info = analyze_column_values(df, 'Weather')
+    print(f'Weather\nType : {weather_info['type']}')
+    if 'values' in weather_info.keys():
+        for x in weather_info['values']:
+            print(x, end=', ')
+    else:
+        for x in weather_info['range']:
+            print(x)'''
+
+    #print("\nWeather column analysis:", weather_info)
     
     # Get complete dataset summary
-    full_summary = get_dataset_summary(df)
-    print("\nFull dataset summary:")
-    for col, info in full_summary.items():
-        print(f"{col}: {info}")
+    #full_summary = get_dataset_summary(df)
+    #print("\nFull dataset summary:")
+    #for col, info in full_summary.items():
+        #print(f"{col}: {info}")
+
+    get_dataset_summary(df)
