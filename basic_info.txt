@@ -102,3 +102,14 @@ Poor, Fair, Good,
 User_Experience
 Type : categorical
 Positive, Negative, Neutral, 
+
+
+
+Positive    0.3380
+Neutral     0.3349
+Negative    0.3271
+
+
+User_Experience
+
+df.groupby('Weather')['User_Experience'].value_counts(normalize=True)

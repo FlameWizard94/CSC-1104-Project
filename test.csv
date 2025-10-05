@@ -1,0 +1,11 @@
+Weather,Time_of_Day,Bike_Type,User_Experience
+sunny,morning,normal,Positive
+sunny,afternoon,normal,Positive
+rainy,morning,mountain,Negative
+rainy,evening,normal,Negative
+rainy,night,mountain,Negative
+cloudy,afternoon,normal,Neutral
+cloudy,morning,mountain,Neutral
+sunny,evening,normal,Positive
+rainy,afternoon,normal,Negative
+sunny,night,mountain,Positive

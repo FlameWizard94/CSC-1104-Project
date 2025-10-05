@@ -1,0 +1,23 @@
+#Temperature(C) - 10 - 35
+#Age, 18 - 70
+#Distance_Travelled(km) 0 - 5
+#Humidity(%) - 30 - 90
+#Is_Holiday
+#Is_Weekend
+#Helmet_Used
+
+df['Temperature_binned'] = pd.cut(df['Temperature(C)'], 
+                                 bins=[10, 15, 20, 25, 30, 35],
+                                 labels=['10-15', '15-20', '20-25', '25-30', '30-35'])
+
+df['Age_binned'] = pd.cut(df['Age'], 
+                                 bins=[18, 31, 44, 57, 70],
+                                 labels=['18-31', '31-44', '44-57', '57-70'])
+
+df['Distance_binned'] = pd.cut(df['Distance_Travelled(km)'], 
+                                 bins=[0, 1, 2, 3, 4, 5],
+                                 labels=['0-1', '1-2', '2-3', '3-4', '4-5'])
+
+df['Humidity_binned'] = pd.cut(df['Humidity(%) '], 
+                                 bins=[30, 45, 60, 75, 90],
+                                 labels=['30-45', '45-60', '60-75', '75-90'])
