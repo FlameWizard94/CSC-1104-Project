@@ -1,0 +1,189 @@
+Bike_Type
+	Given bmx:
+		Positive: 0.3458
+		Neutral: 0.3197
+		Negative: 0.3345
+
+	Given hill:
+		Positive: 0.3363
+		Neutral: 0.3419
+		Negative: 0.3217
+
+	Given normal:
+		Positive: 0.3320
+		Neutral: 0.3428
+		Negative: 0.3251
+
+
+Age
+
+Gender
+	Given Female:
+		Positive: 0.3438
+		Neutral: 0.3241
+		Negative: 0.3320
+
+	Given Male:
+		Positive: 0.3324
+		Neutral: 0.3357
+		Negative: 0.3318
+
+	Given Other:
+		Positive: 0.3378
+		Neutral: 0.3446
+		Negative: 0.3177
+
+
+Occupation
+	Given Unemployed:
+		Positive: 0.3442
+		Neutral: 0.3279
+		Negative: 0.3279
+
+	Given Student:
+		Positive: 0.3299
+		Neutral: 0.3426
+		Negative: 0.3275
+
+	Given Professional:
+		Positive: 0.3487
+		Neutral: 0.3207
+		Negative: 0.3306
+
+	Given Retired:
+		Positive: 0.3292
+		Neutral: 0.3484
+		Negative: 0.3224
+
+
+Distance_Travelled(km)
+
+Weather
+	Given cloudy:
+		Positive: 0.3436
+		Neutral: 0.3257
+		Negative: 0.3307
+
+	Given sunny:
+		Positive: 0.3377
+		Neutral: 0.3422
+		Negative: 0.3201
+
+	Given rainy:
+		Positive: 0.3326
+		Neutral: 0.3369
+		Negative: 0.3305
+
+
+Day_of_Week
+	Given Saturday:
+		Positive: 0.3235
+		Neutral: 0.3425
+		Negative: 0.3340
+
+	Given Thursday:
+		Positive: 0.3479
+		Neutral: 0.3377
+		Negative: 0.3144
+
+	Given Monday:
+		Positive: 0.3414
+		Neutral: 0.3124
+		Negative: 0.3462
+
+	Given Friday:
+		Positive: 0.3436
+		Neutral: 0.3484
+		Negative: 0.3080
+
+	Given Sunday:
+		Positive: 0.3291
+		Neutral: 0.3417
+		Negative: 0.3291
+
+	Given Wednesday:
+		Positive: 0.3418
+		Neutral: 0.3389
+		Negative: 0.3193
+
+	Given Tuesday:
+		Positive: 0.3389
+		Neutral: 0.3229
+		Negative: 0.3382
+
+
+Time_of_Day
+	Given morning:
+		Positive: 0.3278
+		Neutral: 0.3447
+		Negative: 0.3275
+
+	Given afternoon:
+		Positive: 0.3524
+		Neutral: 0.3274
+		Negative: 0.3202
+
+	Given night:
+		Positive: 0.3302
+		Neutral: 0.3351
+		Negative: 0.3347
+
+	Given evening:
+		Positive: 0.3416
+		Neutral: 0.3322
+		Negative: 0.3263
+
+
+Temperature(C)
+
+Humidity(%)
+
+Is_Holiday
+
+Is_Weekend
+
+Purpose_of_Ride
+	Given Leisure:
+		Positive: 0.3380
+		Neutral: 0.3368
+		Negative: 0.3252
+
+	Given Errands:
+		Positive: 0.3429
+		Neutral: 0.3286
+		Negative: 0.3286
+
+	Given Exercise:
+		Positive: 0.3367
+		Neutral: 0.3348
+		Negative: 0.3285
+
+	Given Commute:
+		Positive: 0.3343
+		Neutral: 0.3397
+		Negative: 0.3260
+
+
+Satisfaction_Level(of 5)
+
+Helmet_Used
+
+Traffic_Intensity(of 10)
+
+Road_Condition
+	Given Poor:
+		Positive: 0.3352
+		Neutral: 0.3416
+		Negative: 0.3232
+
+	Given Fair:
+		Positive: 0.3408
+		Neutral: 0.3200
+		Negative: 0.3393
+
+	Given Good:
+		Positive: 0.3380
+		Neutral: 0.3430
+		Negative: 0.3190
+
+

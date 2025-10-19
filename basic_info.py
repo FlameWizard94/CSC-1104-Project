@@ -1,42 +1,7 @@
 import pandas as pd
-
-def load_dataset(file_path):
-    """
-    Load the dataset from a CSV file.
-    
-    Args:
-        file_path (str): Path to the CSV file
-        
-    Returns:
-        pandas.DataFrame: Loaded dataset
-    """
-    return pd.read_csv(file_path)
-
-def get_column_info(df):
-    """
-    Get information about all columns in the dataset.
-    
-    Args:
-        df (pandas.DataFrame): The dataset
-        
-    Returns:
-        list: List of all column names
-    """
-    return list(df.columns)
+import numpy as np
 
 def analyze_column_values(df, column_name):
-    """
-    Analyze the values in a specific column.
-    For categorical columns: returns unique values
-    For numerical columns: returns min and max range
-    
-    Args:
-        df (pandas.DataFrame): The dataset
-        column_name (str): Name of the column to analyze
-        
-    Returns:
-        dict: Analysis results with 'type' and 'values' or 'range'
-    """
     if df[column_name].dtype == 'object' or df[column_name].dtype == 'category':
         # Categorical column
         unique_values = df[column_name].unique().tolist()
@@ -55,20 +20,6 @@ def analyze_column_values(df, column_name):
         }
 
 def get_dataset_summary(df):
-    """
-    Get a complete summary of all columns in the dataset.
-    
-    Args:
-        df (pandas.DataFrame): The dataset
-        
-    Returns:
-        dict: Summary of all columns with their possible values or ranges
-    """
-    '''summary = {}
-    for column in df.columns:
-        summary[column] = analyze_column_values(df, column)
-    return summary'''
-
     print('Summary\n--------------------------------------')
     for name in df.columns:
         column = analyze_column_values(df, name)
@@ -81,7 +32,74 @@ def get_dataset_summary(df):
             for x, y in column['range'].items():
                 print(f'{x} : {y}')
 
-def categorise_dataset(df):
+def sort_types(df):
+    sorted_df = df.copy()
+    
+    # Convert to Numerical
+    numerical_columns = ['Age', 'Distance_Travelled(km)', 'Temperature(C)', 'Humidity(%)']
+    for col in numerical_columns:
+        sorted_df[col] = pd.to_numeric(sorted_df[col].astype(str), errors='coerce')
+
+    # Convert to categorical
+    categorical_columns = ['Bike_Type', 'Gender', 'Occupation', 'Weather', 'Day_of_Week', 
+                        'Time_of_Day', 'Purpose_of_Ride', 'Road_Condition', 'User_Experience']
+    for col in categorical_columns:
+        sorted_df[col] = sorted_df[col].astype('category')
+
+    # Convert to boolean
+    boolean_columns = ['Is_Holiday', 'Is_Weekend', 'Helmet_Used']
+    for col in boolean_columns:
+        # First ensure they're strings, then map to boolean
+        sorted_df[col] = sorted_df[col].astype(str).str.lower().map({'true': True, 'false': False, '1': True, '0': False})
+
+    # Handle ordinal/numerical columns
+    ordinal_columns = ['Satisfaction_Level(of 5)', 'Traffic_Intensity(of 10)']
+    for col in ordinal_columns:
+        sorted_df[col] = pd.to_numeric(sorted_df[col].astype(str), errors='coerce')
+    
+    return sorted_df
+
+def central_tendancy(df):
+    output = ''
+    means = df.select_dtypes(include=['number']).mean()
+    modes = df.select_dtypes(include=['number']).mode()
+    medians = df.select_dtypes(include=['number']).median()
+    columns = list(df.columns)
+
+    #Means
+    output += f'Means\n-----------\n'
+    output += f"{means}, \n"
+
+    #Medians
+    output += f'\nMedians\n-----------\n'
+    output += f'{medians}, \n'
+
+    #Modes
+    output += f'\nModes\n----------\n'
+    for col in columns:
+        output += f'{col}:\t{df[col].mode().iloc[0]}\n'
+    
+    return output
+
+def dispersion(df):
+    output = {}
+    numerical_cols = df.select_dtypes(include=['number']).columns
+    for col in numerical_cols:
+        output[col] = {'Q1' : float(df[col].quantile(0.25)),
+                       'Q2' : float(df[col].quantile(0.50)),
+                       'Q3' : float(df[col].quantile(0.75)),
+                       'IQR' : round( float(df[col].quantile(0.75) - df[col].quantile(0.25)), 3),
+                       'Max' : float(df[col].max()),
+                       'Min' : float(df[col].min()),
+                       'Var' : round(float(df[col].var()), 3),
+                       'Std' : round(float(df[col].std()), 3)}
+        
+    return output
+        
+
+
+def categorise_dataset(og_df):                                
+    df = og_df.copy()
     df['Satisfaction_Level(of 5)'] = pd.Categorical(df['Satisfaction_Level(of 5)'], 
                                                categories=[1, 2, 3, 4, 5],
                                                ordered=True)
@@ -129,9 +147,9 @@ def get_experiences(df):
     neutral = df['User_Experience'].value_counts()['Neutral']
     negative = df['User_Experience'].value_counts()['Negative']
 
-    experiences = {'Positive' : positive, 
-                   'Neutral' : neutral,
-                   'Negative' : negative}
+    experiences = {'Positive' : positive * 1000, 
+                   'Neutral' : neutral * 1000,
+                   'Negative' : negative * 1000}
     
     return experiences
 
@@ -171,15 +189,13 @@ def conditional_prob(df):
 
     return probabilities
 
-
-
         
 
 if __name__ == "__main__":
-    df = load_dataset('Dataset_BicycleUse.csv')
+    df = pd.read_csv('Dataset_BicycleUse.csv')
     
     # Get all column names
-    columns = get_column_info(df)
+    columns = list(df.columns)
     print("All columns:")
     for x in columns:
         print(x)

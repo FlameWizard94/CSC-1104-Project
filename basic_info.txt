@@ -81,7 +81,7 @@ Type : categorical
 Leisure, Errands, Exercise, Commute, 
 
 Satisfaction_Level(of 5)
-Type : numerical
+Type : numerical, discrete
 min : 1
 max : 5
 
@@ -104,12 +104,7 @@ Type : categorical
 Positive, Negative, Neutral, 
 
 
+Positive    3380
+Neutral     3349
+Negative    3271
 
-Positive    0.3380
-Neutral     0.3349
-Negative    0.3271
-
-
-User_Experience
-
-df.groupby('Weather')['User_Experience'].value_counts(normalize=True)

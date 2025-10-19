@@ -1,0 +1,40 @@
+Means
+-----------
+Age                         44.117500
+Distance_Travelled(km)       2.500774
+Temperature(C)              22.688290
+Humidity(%)                 59.662500
+Satisfaction_Level(of 5)     3.013000
+Traffic_Intensity(of 10)     5.518400
+dtype: float64, 
+
+Medians
+-----------
+Age                         44.00
+Distance_Travelled(km)       2.51
+Temperature(C)              22.80
+Humidity(%)                 60.00
+Satisfaction_Level(of 5)     3.00
+Traffic_Intensity(of 10)     6.00
+dtype: float64, 
+
+Modes
+----------
+Bike_Type:	hill
+Age:	31
+Gender:	Other
+Occupation:	Professional
+Distance_Travelled(km):	3.11
+Weather:	cloudy
+Day_of_Week:	Friday
+Time_of_Day:	evening
+Temperature(C):	14.2
+Humidity(%):	80
+Is_Holiday:	True
+Is_Weekend:	False
+Purpose_of_Ride:	Exercise
+Satisfaction_Level(of 5):	2
+Helmet_Used:	False
+Traffic_Intensity(of 10):	1
+Road_Condition:	Good
+User_Experience:	Positive
