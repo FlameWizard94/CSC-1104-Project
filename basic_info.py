@@ -1,5 +1,5 @@
 import pandas as pd
-import numpy as np
+from scipy.stats import trim_mean
 
 def analyze_column_values(df, column_name):
     if df[column_name].dtype == 'object' or df[column_name].dtype == 'category':
@@ -31,6 +31,11 @@ def get_dataset_summary(df):
         else:
             for x, y in column['range'].items():
                 print(f'{x} : {y}')
+
+def fix_weekend(og_df):
+    df = og_df.copy()
+    df['Is_Weekend'] = df['Day_of_Week'].isin(['Friday', 'Saturday', 'Sunday'])
+    return df
 
 def sort_types(df):
     sorted_df = df.copy()
@@ -81,6 +86,17 @@ def central_tendancy(df):
     
     return output
 
+def trimmed_mean(df, trim_percent=2):
+    numerical_cols = df.select_dtypes(include=['number']).columns
+    
+    trimmed_means = {}
+    proportion = trim_percent / 100
+    for col in numerical_cols:        
+        trimmed_means[col] = trim_mean(df[col], proportion)
+    
+    return trimmed_means
+
+
 def dispersion(df):
     output = {}
     numerical_cols = df.select_dtypes(include=['number']).columns
@@ -95,8 +111,6 @@ def dispersion(df):
                        'Std' : round(float(df[col].std()), 3)}
         
     return output
-        
-
 
 def categorise_dataset(og_df):                                
     df = og_df.copy()
@@ -173,23 +187,10 @@ def conditional_prob(df):
         else:
             print(f'{col} is {df[col].dtype}')
 
-        
-        #if categorical column treated as numerical
-        '''elif col == 'Satisfaction_Level(of 5)' or col == 'Traffic_Intensity(of 10)':
-            group = df.groupby(col)['User_Experience'].value_counts(normalize=True)
-            max = len(group.keys()) / 3
-            for x in range(1, max + 1):
-                probabilities[col][f'Given {x}'] = {'Positive' : float(group.loc[(x, 'Positive')]),
-                                                 'Neutral' : float(group.loc[(x, 'Neutral')]),
-                                                 'Negative' : float(group.loc[(x, 'Negative')])}'''
-
-        #ranges
-        #else:
-            #group = df.groupby(f'{col}')['User_Experience'].value_counts(normalize=True)
-
     return probabilities
-
         
+
+
 
 if __name__ == "__main__":
     df = pd.read_csv('Dataset_BicycleUse.csv')

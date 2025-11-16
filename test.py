@@ -12,8 +12,9 @@ def write_disperion(sorted_df):
             f.write('\n')
 
 def write_conditional_probs(df):
+    cat_df = categorise_dataset(df)
+    conditional_probabilities = conditional_prob(cat_df)
     with open('conditional_probabilities.txt', 'w') as f:
-        conditional_probabilities = conditional_prob(df)
         for col, data in conditional_probabilities.items():
             f.write(f'{col}\n')
             for given, experiences in data.items():
@@ -28,9 +29,18 @@ def write_central_tendancy(df):
         sorted_df = sort_types(df)
         f.write(central_tendancy(sorted_df))
 
+def trimmed_means(og_df):
+    df = sort_types(og_df)
+    with open('trimmed_means.txt', 'w') as f:
+        trimmed = trimmed_mean(df)
+        for col, mean in trimmed.items():
+            f.write(f'{col}\t\t{mean}\n')
+
 df = pd.read_csv('Dataset_BicycleUse.csv')
+df = fix_weekend(df)
 sorted_df = sort_types(df)
 
 write_central_tendancy(df)
 write_conditional_probs(df)
 write_disperion(df)
+trimmed_means(df)

@@ -1,0 +1,6 @@
+Age		44.12385416666667
+Distance_Travelled(km)		2.500740625
+Temperature(C)		22.695937500000003
+Humidity(%)		59.651875
+Satisfaction_Level(of 5)		3.013541666666667
+Traffic_Intensity(of 10)		5.519166666666667
