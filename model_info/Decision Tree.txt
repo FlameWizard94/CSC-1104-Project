@@ -1,0 +1,68 @@
+Accuracy:	0.3295
+
+Confusion Matrix
+
+                 Predicted_Negative  Predicted_Neutral  Predicted_Positive
+Actual_Negative                  90                256                 308
+Actual_Neutral                  104                281                 285
+Actual_Positive                  98                290                 288
+
+
+Rates:
+
+Negative
+------------------------------
+P:	654.0000
+N:	1346.0000
+TP:	90.0000
+TN:	1144.0000
+FP:	202.0000
+FN:	564.0000
+accuracy:	0.6170
+precision:	0.3082
+recall:	0.1376
+f1-Score:	0.1903
+sensitivity:	0.1376
+specificity:	0.8499
+
+Neutral
+------------------------------
+P:	670.0000
+N:	1330.0000
+TP:	281.0000
+TN:	784.0000
+FP:	546.0000
+FN:	389.0000
+accuracy:	0.5325
+precision:	0.3398
+recall:	0.4194
+f1-Score:	0.3754
+sensitivity:	0.4194
+specificity:	0.5895
+
+Positive
+------------------------------
+P:	676.0000
+N:	1324.0000
+TP:	288.0000
+TN:	731.0000
+FP:	593.0000
+FN:	388.0000
+accuracy:	0.5095
+precision:	0.3269
+recall:	0.4260
+f1-Score:	0.3699
+sensitivity:	0.4260
+specificity:	0.5521
+
+
+Classification Report
+              precision    recall  f1-score   support
+
+    Negative       0.31      0.14      0.19       654
+     Neutral       0.34      0.42      0.38       670
+    Positive       0.33      0.43      0.37       676
+
+    accuracy                           0.33      2000
+   macro avg       0.32      0.33      0.31      2000
+weighted avg       0.33      0.33      0.31      2000

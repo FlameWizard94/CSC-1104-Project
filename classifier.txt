@@ -32,117 +32,14 @@ Positive    676
 Neutral     670
 Negative    654
 Name: count, dtype: int64
-
-Features scaled successfully!
-
-Training Logistic Regression Classifier...
-Training completed!
-
-Accuracy: 0.3515 (35.15%)
-
-Detailed Performance:
-              precision    recall  f1-score   support
-
-    Negative       0.35      0.18      0.23       654
-     Neutral       0.36      0.41      0.39       670
-    Positive       0.34      0.47      0.39       676
-
-    accuracy                           0.35      2000
-   macro avg       0.35      0.35      0.34      2000
-weighted avg       0.35      0.35      0.34      2000
-
-Predictions
-
-['Actual_User_Experience', 'Predicted_User_Experience', 'Correct']
-
-     Actual_User_Experience Predicted_User_Experience  Correct
-9671               Negative                   Neutral    False
-5672               Negative                  Negative     True
-5389               Positive                  Positive     True
-3103               Positive                  Positive     True
-7910               Positive                  Positive     True
-...                     ...                       ...      ...
-4213                Neutral                   Neutral     True
-7136               Negative                  Negative     True
-7758               Positive                   Neutral    False
-7813               Negative                   Neutral    False
-5492               Positive                  Negative    False
-
-[2000 rows x 3 columns]
-Test predictions
-['Neutral' 'Negative' 'Positive' 'Positive' 'Positive' 'Neutral' 'Neutral'
- 'Neutral' 'Positive' 'Neutral']
-
-Test prediction probabilities
-[[0.30341928 0.36698736 0.32959335]
- [0.35200898 0.34112221 0.30686881]
- [0.32515389 0.32642865 0.34841747]
- [0.32190223 0.32956886 0.34852891]
- [0.33499432 0.30277009 0.36223559]
- [0.33361372 0.35302922 0.31335706]
- [0.30209546 0.36918137 0.32872317]
- [0.30783647 0.3553797  0.33678384]
- [0.3258742  0.32669923 0.34742657]
- [0.32411426 0.33831597 0.33756977]]
-
-Rates:
-
-Negative
-------------------------------
-P:	654.0000
-N:	1346.0000
-TP:	115.0000
-TN:	1129.0000
-FP:	217.0000
-FN:	539.0000
-accuracy:	0.6220
-precision:	0.3464
-recall:	0.1758
-f1-Score:	0.2333
-sensitivity:	0.1758
-specificity:	0.8388
-
-Neutral
-------------------------------
-P:	670.0000
-N:	1330.0000
-TP:	273.0000
-TN:	855.0000
-FP:	475.0000
-FN:	397.0000
-accuracy:	0.5640
-precision:	0.3650
-recall:	0.4075
-f1-Score:	0.3850
-sensitivity:	0.4075
-specificity:	0.6429
-
-Positive
-------------------------------
-P:	676.0000
-N:	1324.0000
-TP:	315.0000
-TN:	719.0000
-FP:	605.0000
-FN:	361.0000
-accuracy:	0.5170
-precision:	0.3424
-recall:	0.4660
-f1-Score:	0.3947
-sensitivity:	0.4660
-specificity:	0.5431
-
-
-
-PREDICTION SUMMARY:
-Total test samples: 2000
-Correct predictions: 703 (35.15%)
-Incorrect predictions: 1297 (64.85%)
-
-CONFUSION MATRIX (What was predicted vs actual):
-                 Predicted_Negative  Predicted_Neutral  Predicted_Positive
-Actual_Negative                 115                231                 308
-Actual_Neutral                  100                273                 297
-Actual_Positive                 117                244                 315
-
-FINAL ACCURACY: 0.3515 (35.15%)
+Model Comparison:
+==================================================
+Logistic Regression       Accuracy: 0.3515
+Decision Tree             Accuracy: 0.3295
+Random Forest             Accuracy: 0.3275
+SVM                       Accuracy: 0.3445
+K-Nearest Neighbors       Accuracy: 0.3140
+Naive Bayes               Accuracy: 0.3365
+Gradient Boosting         Accuracy: 0.3315
+Ada Boosting              Accuracy: 0.3415
+Bagging                   Accuracy: 0.3285
