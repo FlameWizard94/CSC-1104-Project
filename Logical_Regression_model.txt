@@ -1,0 +1,120 @@
+
+Bike_Type:
+----------------------------------------
+  Encoding: bmx→0 hill→1 normal→2 
+  Model interpretation (with current encoding):
+    • For Negative: negative effect (coef: -0.0064)
+      Higher encoded values → less likely
+    • For Neutral: positive effect (coef: 0.0227)
+      Higher encoded values → more likely
+    • For Positive: negative effect (coef: -0.0163)
+      Higher encoded values → less likely
+
+Gender:
+----------------------------------------
+  Encoding: Female→0 Male→1 Other→2 
+  Model interpretation (with current encoding):
+    • For Negative: negative effect (coef: -0.0227)
+      Higher encoded values → less likely
+    • For Neutral: positive effect (coef: 0.0196)
+      Higher encoded values → more likely
+    • For Positive: positive effect (coef: 0.0031)
+      Higher encoded values → more likely
+
+Occupation:
+----------------------------------------
+  Encoding: Professional→0 Retired→1 Student→2 Unemployed→3 
+  Model interpretation (with current encoding):
+    • For Negative: positive effect (coef: 0.0082)
+      Higher encoded values → more likely
+    • For Neutral: negative effect (coef: -0.0012)
+      Higher encoded values → less likely
+    • For Positive: negative effect (coef: -0.0070)
+      Higher encoded values → less likely
+
+Weather:
+----------------------------------------
+  Encoding: cloudy→0 rainy→1 sunny→2 
+  Model interpretation (with current encoding):
+    • For Negative: negative effect (coef: -0.0009)
+      Higher encoded values → less likely
+    • For Neutral: positive effect (coef: 0.0230)
+      Higher encoded values → more likely
+    • For Positive: negative effect (coef: -0.0221)
+      Higher encoded values → less likely
+
+Day_of_Week:
+----------------------------------------
+  Encoding: Friday→0 Monday→1 Saturday→2 Sunday→3 Thursday→4 Tuesday→5 Wednesday→6 
+  Model interpretation (with current encoding):
+    • For Negative: negative effect (coef: -0.0042)
+      Higher encoded values → less likely
+    • For Neutral: positive effect (coef: 0.0043)
+      Higher encoded values → more likely
+    • For Positive: negative effect (coef: -0.0001)
+      Higher encoded values → less likely
+
+Time_of_Day:
+----------------------------------------
+  Encoding: afternoon→0 evening→1 morning→2 night→3 
+  Model interpretation (with current encoding):
+    • For Negative: positive effect (coef: 0.0210)
+      Higher encoded values → more likely
+    • For Neutral: positive effect (coef: 0.0149)
+      Higher encoded values → more likely
+    • For Positive: negative effect (coef: -0.0359)
+      Higher encoded values → less likely
+
+Purpose_of_Ride:
+----------------------------------------
+  Encoding: Commute→0 Errands→1 Exercise→2 Leisure→3 
+  Model interpretation (with current encoding):
+    • For Negative: positive effect (coef: 0.0008)
+      Higher encoded values → more likely
+    • For Neutral: negative effect (coef: -0.0037)
+      Higher encoded values → less likely
+    • For Positive: positive effect (coef: 0.0029)
+      Higher encoded values → more likely
+
+Road_Condition:
+----------------------------------------
+  Encoding: Fair→0 Good→1 Poor→2 
+  Model interpretation (with current encoding):
+    • For Negative: negative effect (coef: -0.0175)
+      Higher encoded values → less likely
+    • For Neutral: positive effect (coef: 0.0232)
+      Higher encoded values → more likely
+    • For Positive: negative effect (coef: -0.0057)
+      Higher encoded values → less likely
+
+Numerical Features:
+----------------------------------------
+
+  Age:
+    • Negative: slightly increases probability (coef: 0.0051)
+    • Neutral: slightly decreases probability (coef: -0.0073)
+    • Positive: slightly increases probability (coef: 0.0022)
+
+  Distance_Travelled(km):
+    • Negative: slightly decreases probability (coef: -0.0033)
+    • Neutral: slightly decreases probability (coef: -0.0095)
+    • Positive: slightly increases probability (coef: 0.0128)
+
+  Temperature(C):
+    • Negative: slightly decreases probability (coef: -0.0089)
+    • Neutral: slightly decreases probability (coef: -0.0115)
+    • Positive: slightly increases probability (coef: 0.0203)
+
+  Humidity(%):
+    • Negative: slightly increases probability (coef: 0.0023)
+    • Neutral: slightly decreases probability (coef: -0.0100)
+    • Positive: slightly increases probability (coef: 0.0077)
+
+  Satisfaction_Level(of 5):
+    • Neutral: slightly decreases probability (coef: -0.0128)
+    • Positive: slightly increases probability (coef: 0.0120)
+
+  Traffic_Intensity(of 10):
+    • Negative: slightly increases probability (coef: 0.0129)
+    • Neutral: slightly increases probability (coef: 0.0094)
+    • Positive: slightly decreases probability (coef: -0.0223)

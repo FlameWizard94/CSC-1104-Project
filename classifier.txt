@@ -32,14 +32,35 @@ Positive    676
 Neutral     670
 Negative    654
 Name: count, dtype: int64
+
+ 1. Time_of_Day               0.0171 (1.71%)
+ 2. Temperature(C)            0.0159 (1.59%)
+ 3. Traffic_Intensity(of 10)  0.0112 (1.12%)
+ 4. Is_Holiday                0.0078 (0.78%)
+ 5. Distance_Travelled(km)    0.0074 (0.74%)
+ 6. Age                       0.0073 (0.73%)
+ 7. Helmet_Used               0.0055 (0.55%)
+ 8. Road_Condition            0.0053 (0.53%)
+ 9. Humidity(%)               0.0045 (0.45%)
+10. Gender                    0.0042 (0.42%)
+11. Satisfaction_Level(of 5)  0.0034 (0.34%)
+12. Is_Weekend                0.0025 (0.25%)
+13. Weather                   0.0024 (0.24%)
+14. Bike_Type                 0.0022 (0.22%)
+15. Occupation                0.0014 (0.14%)
+16. Day_of_Week               0.0011 (0.11%)
+17. Purpose_of_Ride           0.0010 (0.10%)
+
 Model Comparison:
 ==================================================
-Logistic Regression       Accuracy: 0.3515
-Decision Tree             Accuracy: 0.3295
-Random Forest             Accuracy: 0.3275
-SVM                       Accuracy: 0.3445
-K-Nearest Neighbors       Accuracy: 0.3140
-Naive Bayes               Accuracy: 0.3365
-Gradient Boosting         Accuracy: 0.3315
-Ada Boosting              Accuracy: 0.3415
-Bagging                   Accuracy: 0.3285
+
+Model Accuracies
+ 1. Logistic Regression       0.3515 (35.15%)
+ 2. Gradient Boosting         0.3450 (34.50%)
+ 3. SVM                       0.3445 (34.45%)
+ 4. Ada Boosting              0.3415 (34.15%)
+ 5. Naive Bayes               0.3365 (33.65%)
+ 6. Decision Tree             0.3295 (32.95%)
+ 7. Bagging                   0.3285 (32.85%)
+ 8. Random Forest             0.3275 (32.75%)
+ 9. K-Nearest Neighbors       0.3140 (31.40%)

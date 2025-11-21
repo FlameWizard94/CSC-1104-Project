@@ -1,0 +1,155 @@
+Bike_Type
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Bike_Type                                                 
+bmx              33.454545  31.969697  34.575758  Positive
+hill             32.174688  34.194890  33.630422   Neutral
+normal           32.513497  34.283143  33.203359   Neutral
+
+Age
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Age                                                       
+18-31            31.047476  34.212509  34.740015  Positive
+31-44            33.932303  32.804012  33.263686  Negative
+44-57            33.630470  33.265802  33.103728  Negative
+57-70            32.394366  33.601610  34.004024  Positive
+
+Gender
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Gender                                                    
+Female           33.202060  32.414420  34.383520  Positive
+Male             33.182504  33.574661  33.242836   Neutral
+Other            31.767139  34.456265  33.776596   Neutral
+
+Occupation
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Occupation                                                
+Professional     33.057851  32.073987  34.868162  Positive
+Retired          32.237370  34.843625  32.919006   Neutral
+Student          32.751092  34.259627  32.989281   Neutral
+Unemployed       32.788226  32.788226  34.423549  Positive
+
+Distance_Travelled(km)
+==================================================
+User_Experience          Negative    Neutral   Positive    Favors
+Distance_Travelled(km)                                           
+0-1                     32.757745  33.621127  33.621127  Positive
+1-2                     33.106134  33.641675  33.252191   Neutral
+2-3                     32.716358  34.017009  33.266633   Neutral
+3-4                     31.663327  33.116232  35.220441  Positive
+4-5                     33.299697  33.047427  33.652876  Positive
+
+Weather
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Weather                                                   
+cloudy           33.074395  32.566477  34.359128  Positive
+rainy            33.051104  33.686120  33.262776   Neutral
+sunny            32.008368  34.219964  33.771668   Neutral
+
+Day_of_Week
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Day_of_Week                                               
+Friday           30.795610  34.842250  34.362140   Neutral
+Monday           34.620690  31.241379  34.137931  Negative
+Saturday         33.403657  34.247539  32.348805   Neutral
+Sunday           32.914046  34.171908  32.914046   Neutral
+Thursday         31.441048  33.770015  34.788937  Positive
+Tuesday          33.819444  32.291667  33.888889  Positive
+Wednesday        31.929825  33.894737  34.175439  Positive
+
+Time_of_Day
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Time_of_Day                                               
+afternoon        32.017720  32.742650  35.239629  Positive
+evening          32.628280  33.215825  34.155895  Positive
+morning          32.745098  34.470588  32.784314   Neutral
+night            33.471417  33.512842  33.015742   Neutral
+
+Temperature(C)
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Temperature(C)                                            
+10-15            34.320735  33.452503  32.226762  Negative
+15-20            32.022472  33.707865  34.269663  Positive
+20-25            32.253165  34.329114  33.417722   Neutral
+25-30            32.610790  33.574181  33.815029  Positive
+30-35            32.365962  32.415150  35.218888  Positive
+
+Humidity(%)
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Humidity(%)                                               
+30-45            32.177122  34.944649  32.878229   Neutral
+45-60            32.590759  33.003300  34.405941  Positive
+60-75            34.015555  32.419157  33.565289  Negative
+75-90            32.108956  33.429633  34.461411  Positive
+
+Is_Holiday
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Is_Holiday                                                
+False            32.595128  33.078317  34.326555  Positive
+True             32.823366  33.896285  33.280350   Neutral
+
+Is_Weekend
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Is_Weekend                                                
+False            32.975918  32.782563  34.241519  Positive
+True             32.359081  34.423568  33.217351   Neutral
+
+Purpose_of_Ride
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Purpose_of_Ride                                           
+Commute          32.603306  33.966942  33.429752   Neutral
+Errands          32.857143  32.857143  34.285714  Positive
+Exercise         32.850431  33.476899  33.672670  Positive
+Leisure          32.521947  33.679170  33.798883  Positive
+
+Satisfaction_Level(of 5)
+==================================================
+User_Experience            Negative    Neutral   Positive    Favors
+Satisfaction_Level(of 5)                                           
+1                         33.507853  33.246073  33.246073  Negative
+2                         31.460134  35.014409  33.525456   Neutral
+3                         32.788509  32.689450  34.522041  Positive
+4                         33.247688  33.556012  33.196300   Neutral
+5                         32.648067  32.892805  34.459129  Positive
+
+Helmet_Used
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Helmet_Used                                               
+False            32.721102  33.918946  33.359952   Neutral
+True             32.698858  33.059507  34.241635  Positive
+
+Traffic_Intensity(of 10)
+==================================================
+User_Experience            Negative    Neutral   Positive    Favors
+Traffic_Intensity(of 10)                                           
+1                         33.115061  31.898971  34.985968  Positive
+2                         31.974922  32.706374  35.318704  Positive
+3                         32.926829  33.130081  33.943089  Positive
+4                         31.048387  33.971774  34.979839  Positive
+5                         34.098019  35.036496  30.865485   Neutral
+6                         32.628399  34.441088  32.930514   Neutral
+7                         31.987578  32.712215  35.300207  Positive
+8                         30.339321  34.331337  35.329341  Positive
+9                         35.631068  32.427184  31.941748  Negative
+10                        33.206107  34.351145  32.442748   Neutral
+
+Road_Condition
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Road_Condition                                            
+Fair             33.925346  31.998796  34.075858  Positive
+Good             31.896552  34.304400  33.799049   Neutral
+Poor             32.317441  34.158117  33.524442   Neutral
+

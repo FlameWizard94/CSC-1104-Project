@@ -142,7 +142,7 @@ def categorise_dataset(og_df):
                                     labels=['30-45', '45-60', '60-75', '75-90'],
                                     include_lowest=True)
     
-    df['Is_Holiday'] = pd.Categorical(df['Is_Holiday'],
+    '''df['Is_Holiday'] = pd.Categorical(df['Is_Holiday'],
                                 categories=[True, False],
                                 ordered=True)
     
@@ -152,7 +152,7 @@ def categorise_dataset(og_df):
 
     df['Helmet_Used'] = pd.Categorical(df['Helmet_Used'], 
                                 categories=[True, False],
-                                ordered=True)
+                                ordered=True)'''
     
     return df
 
@@ -189,17 +189,122 @@ def conditional_prob(df):
 
     return probabilities
         
+def attribute_impact(df, feature_name):
+    user_experiences = ['Positive', 'Neutral', 'Negative']
+    
+    # Create cross-tabulation
+    #cross_tab = pd.crosstab(df[feature_name], df['User_Experience'], margins=True)
+    cross_tab_pct = pd.crosstab(df[feature_name], df['User_Experience'], 
+                               normalize='index') * 100
+    
+    '''print(f"\nCounts:")
+    print(cross_tab)
+    print(f"\nPercentages (by row):")
+    print(cross_tab_pct.round(1))'''
+    
+    # Add favors column - determines which experience has the highest percentage
+    cross_tab_pct['Favors'] = cross_tab_pct[user_experiences].idxmax(axis=1)
+    
+    # For the 'All' row, we don't want to say it "favors" anything
+    if 'All' in cross_tab_pct.index:
+        cross_tab_pct.loc['All', 'Favors'] = 'Overall'
+    
+    #print(f"\nWith Favors Column:")
+    #print(cross_tab_pct.round(1))
+    
+    return cross_tab_pct
 
+def multi_attribute_impact(df, feature1, feature2, favor=True):
+    user_experiences = ['Positive', 'Neutral', 'Negative']
+
+    # Create a multi-index cross-tab
+    cross_tab = pd.crosstab([df[feature1], df[feature2]], 
+                        df['User_Experience'], 
+                        normalize='index') * 100
+
+    # Add favors column
+    if favor:
+        cross_tab['Favors'] = cross_tab[user_experiences].idxmax(axis=1)
+
+    #print(f"{feature1} × {feature2} on User_Experience:")
+    #print("=" * 60)
+
+    return cross_tab
+
+def attribute_impact_binned(df, feature_name):
+    user_experiences = ['Positive', 'Neutral', 'Negative']
+    
+    # Check if the feature is numerical and should be binned
+    if pd.api.types.is_numeric_dtype(df[feature_name]):
+        binning_strategies = {
+            'Age': {'bins': [18, 31, 44, 57, 70], 'labels': ['18-31', '31-44', '44-57', '57-70']},
+            'Temperature(C)': {'bins': [10, 15, 20, 25, 30, 35], 'labels': ['10-15', '15-20', '20-25', '25-30', '30-35']},
+            'Distance_Travelled(km)': {'bins': [0, 1, 2, 3, 4, 5], 'labels': ['0-1', '1-2', '2-3', '3-4', '4-5']},
+            'Humidity(%)': {'bins': [30, 45, 60, 75, 90], 'labels': ['30-45', '45-60', '60-75', '75-90']},
+            'Satisfaction_Level(of 5)': {'bins': [0.5, 1.5, 2.5, 3.5, 4.5, 5.5], 'labels': ['1', '2', '3', '4', '5']},
+            'Traffic_Intensity(of 10)': {'bins': [0.5, 1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 10.5], 
+                                       'labels': ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']}
+        }
+        
+        # Apply binning if strategy exists, otherwise create generic bins
+        if feature_name in binning_strategies:
+            strategy = binning_strategies[feature_name]
+            binned_feature = pd.cut(df[feature_name], 
+                                  bins=strategy['bins'], 
+                                  labels=strategy['labels'],
+                                  include_lowest=True)
+        else:
+            # Create generic bins for other numerical features
+            unique_vals = df[feature_name].nunique()
+            if unique_vals > 10:
+                # For features with many unique values, create 5 bins
+                binned_feature = pd.cut(df[feature_name], bins=5)
+            else:
+                # For features with few unique values, keep as is but convert to string
+                binned_feature = df[feature_name].astype(str)
+        
+        # Use the binned feature for analysis
+        working_feature = binned_feature
+    else:
+        # For categorical features, use as-is
+        working_feature = df[feature_name]
+    
+    # Create cross-tabulation with percentages
+    cross_tab_pct = pd.crosstab(working_feature, df['User_Experience'], 
+                               normalize='index') * 100
+    
+    # Add favors column - determines which experience has the highest percentage
+    cross_tab_pct['Favors'] = cross_tab_pct[user_experiences].idxmax(axis=1)
+    
+    # Sort the index for better readability (especially for binned numerical data)
+    if hasattr(cross_tab_pct.index, 'categories'):
+        # For categorical indexes, they're already ordered
+        pass
+    else:
+        try:
+            cross_tab_pct = cross_tab_pct.sort_index()
+        except:
+            # If sorting fails, keep as-is
+            pass
+    
+    return cross_tab_pct
 
 
 if __name__ == "__main__":
     df = pd.read_csv('Dataset_BicycleUse.csv')
+    df = fix_weekend(df)
+    df = sort_types(df)
     
     # Get all column names
-    columns = list(df.columns)
-    print("All columns:")
-    for x in columns:
-        print(x)
-    print(f"Num columns: {len(columns)}\n")
-    
-    get_dataset_summary(df)
+    with open('Attribute_impact_binned.txt', 'w') as f:
+        attributes = list(df.columns)
+        attributes.remove('User_Experience')
+        for feature in attributes:
+            if feature in df.columns:
+                table = attribute_impact_binned(df, feature)
+                f.write(f'{feature}\n' + ('=' * 50) + f'\n{table}\n\n')
+
+    time_and_weekend = multi_attribute_impact(df, 'Is_Weekend', 'Time_of_Day')
+    print(time_and_weekend)
+    #days = pd.crosstab(df['Is_Weekend'], df['Day_of_Week'], normalize='index')
+    #print(days)

@@ -1,11 +1,11 @@
-Accuracy:	0.3315
+Accuracy:	0.345
 
 Confusion Matrix
 
                  Predicted_Negative  Predicted_Neutral  Predicted_Positive
-Actual_Negative                 143                236                 275
-Actual_Neutral                  131                253                 286
-Actual_Positive                 154                255                 267
+Actual_Negative                 185                228                 241
+Actual_Neutral                  181                239                 250
+Actual_Positive                 178                232                 266
 
 
 Rates:
@@ -14,55 +14,97 @@ Negative
 ------------------------------
 P:	654.0000
 N:	1346.0000
-TP:	143.0000
-TN:	1061.0000
-FP:	285.0000
-FN:	511.0000
-accuracy:	0.6020
-precision:	0.3341
-recall:	0.2187
-f1-Score:	0.2643
-sensitivity:	0.2187
-specificity:	0.7883
+TP:	185.0000
+TN:	987.0000
+FP:	359.0000
+FN:	469.0000
+accuracy:	0.5860
+precision:	0.3401
+recall:	0.2829
+f1-Score:	0.3088
+sensitivity:	0.2829
+specificity:	0.7333
 
 Neutral
 ------------------------------
 P:	670.0000
 N:	1330.0000
-TP:	253.0000
-TN:	839.0000
-FP:	491.0000
-FN:	417.0000
-accuracy:	0.5460
-precision:	0.3401
-recall:	0.3776
-f1-Score:	0.3579
-sensitivity:	0.3776
-specificity:	0.6308
+TP:	239.0000
+TN:	870.0000
+FP:	460.0000
+FN:	431.0000
+accuracy:	0.5545
+precision:	0.3419
+recall:	0.3567
+f1-Score:	0.3492
+sensitivity:	0.3567
+specificity:	0.6541
 
 Positive
 ------------------------------
 P:	676.0000
 N:	1324.0000
-TP:	267.0000
-TN:	763.0000
-FP:	561.0000
-FN:	409.0000
-accuracy:	0.5150
-precision:	0.3225
-recall:	0.3950
-f1-Score:	0.3551
-sensitivity:	0.3950
-specificity:	0.5763
+TP:	266.0000
+TN:	833.0000
+FP:	491.0000
+FN:	410.0000
+accuracy:	0.5495
+precision:	0.3514
+recall:	0.3935
+f1-Score:	0.3712
+sensitivity:	0.3935
+specificity:	0.6292
 
 
 Classification Report
               precision    recall  f1-score   support
 
-    Negative       0.33      0.22      0.26       654
-     Neutral       0.34      0.38      0.36       670
-    Positive       0.32      0.39      0.36       676
+    Negative       0.34      0.28      0.31       654
+     Neutral       0.34      0.36      0.35       670
+    Positive       0.35      0.39      0.37       676
 
-    accuracy                           0.33      2000
-   macro avg       0.33      0.33      0.33      2000
-weighted avg       0.33      0.33      0.33      2000
+    accuracy                           0.34      2000
+   macro avg       0.34      0.34      0.34      2000
+weighted avg       0.34      0.34      0.34      2000
+
+Feature Importance
+==================================================
+
+Feature                   ImportanTargetce Type                
+------------------------------------------------------------
+Distance_Travelled(km)    0.229649     Gini Importance     
+Temperature(C)            0.181842     Gini Importance     
+Humidity(%)               0.128647     Gini Importance     
+Age                       0.103183     Gini Importance     
+Traffic_Intensity(of 10)  0.056742     Gini Importance     
+Day_of_Week               0.043696     Gini Importance     
+Satisfaction_Level(of 5)  0.035031     Gini Importance     
+Purpose_of_Ride           0.032905     Gini Importance     
+Time_of_Day               0.028236     Gini Importance     
+Road_Condition            0.027378     Gini Importance     
+Gender                    0.025130     Gini Importance     
+Occupation                0.024897     Gini Importance     
+Weather                   0.021571     Gini Importance     
+Bike_Type                 0.019912     Gini Importance     
+Is_Holiday                0.017106     Gini Importance     
+Is_Weekend                0.013805     Gini Importance     
+Helmet_Used               0.010271     Gini Importance     
+
+Correlation with Target:
+Time_of_Day               0.017072
+Temperature(C)            0.015930
+Traffic_Intensity(of 10)  0.011242
+Is_Holiday                0.007814
+Distance_Travelled(km)    0.007413
+Age                       0.007312
+Helmet_Used               0.005542
+Road_Condition            0.005282
+Humidity(%)               0.004454
+Gender                    0.004214
+Satisfaction_Level(of 5)  0.003359
+Is_Weekend                0.002474
+Weather                   0.002400
+Bike_Type                 0.002164
+Occupation                0.001437
+Day_of_Week               0.001150
+Purpose_of_Ride           0.000983

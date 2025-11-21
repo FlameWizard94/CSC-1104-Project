@@ -66,3 +66,45 @@ Classification Report
     accuracy                           0.33      2000
    macro avg       0.33      0.33      0.33      2000
 weighted avg       0.33      0.33      0.33      2000
+
+Feature Importance
+==================================================
+
+Feature                   ImportanTargetce Type                
+------------------------------------------------------------
+Distance_Travelled(km)    0.127388     Gini Importance     
+Temperature(C)            0.125791     Gini Importance     
+Humidity(%)               0.111607     Gini Importance     
+Age                       0.110495     Gini Importance     
+Traffic_Intensity(of 10)  0.073702     Gini Importance     
+Day_of_Week               0.058792     Gini Importance     
+Satisfaction_Level(of 5)  0.052308     Gini Importance     
+Purpose_of_Ride           0.046772     Gini Importance     
+Occupation                0.046259     Gini Importance     
+Time_of_Day               0.042826     Gini Importance     
+Weather                   0.036756     Gini Importance     
+Road_Condition            0.036194     Gini Importance     
+Gender                    0.035307     Gini Importance     
+Bike_Type                 0.034113     Gini Importance     
+Helmet_Used               0.022588     Gini Importance     
+Is_Holiday                0.021800     Gini Importance     
+Is_Weekend                0.017301     Gini Importance     
+
+Correlation with Target:
+Time_of_Day               0.017072
+Temperature(C)            0.015930
+Traffic_Intensity(of 10)  0.011242
+Is_Holiday                0.007814
+Distance_Travelled(km)    0.007413
+Age                       0.007312
+Helmet_Used               0.005542
+Road_Condition            0.005282
+Humidity(%)               0.004454
+Gender                    0.004214
+Satisfaction_Level(of 5)  0.003359
+Is_Weekend                0.002474
+Weather                   0.002400
+Bike_Type                 0.002164
+Occupation                0.001437
+Day_of_Week               0.001150
+Purpose_of_Ride           0.000983

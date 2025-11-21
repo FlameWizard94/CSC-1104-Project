@@ -1,0 +1,229 @@
+Bike_Type
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Bike_Type                                                 
+bmx              33.454545  31.969697  34.575758  Positive
+hill             32.174688  34.194890  33.630422   Neutral
+normal           32.513497  34.283143  33.203359   Neutral
+
+Age
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Age                                                       
+18               36.898396  33.689840  29.411765  Negative
+19               26.630435  41.847826  31.521739   Neutral
+20               31.147541  32.240437  36.612022  Positive
+21               28.095238  38.095238  33.809524   Neutral
+22               29.500000  36.000000  34.500000   Neutral
+23               29.239766  30.994152  39.766082  Positive
+24               29.878049  33.536585  36.585366  Positive
+25               33.333333  33.333333  33.333333  Positive
+26               37.373737  28.282828  34.343434  Negative
+27               28.260870  37.500000  34.239130   Neutral
+28               33.502538  35.532995  30.964467   Neutral
+29               28.497409  36.787565  34.715026   Neutral
+30               27.717391  30.978261  41.304348  Positive
+31               33.783784  30.180180  36.036036  Positive
+32               27.604167  39.062500  33.333333   Neutral
+33               40.223464  25.698324  34.078212  Negative
+34               36.956522  31.521739  31.521739  Negative
+35               32.972973  38.378378  28.648649   Neutral
+36               33.720930  34.883721  31.395349   Neutral
+37               32.596685  34.806630  32.596685   Neutral
+38               31.395349  28.488372  40.116279  Positive
+39               31.428571  37.142857  31.428571   Neutral
+40               34.871795  33.333333  31.794872  Negative
+41               30.857143  32.000000  37.142857  Positive
+42               37.383178  28.504673  34.112150  Negative
+43               35.164835  26.923077  37.912088  Positive
+44               35.294118  35.828877  28.877005   Neutral
+45               39.037433  31.550802  29.411765  Negative
+46               30.645161  29.569892  39.784946  Positive
+47               29.834254  36.464088  33.701657   Neutral
+48               38.048780  30.243902  31.707317  Negative
+49               36.904762  38.095238  25.000000   Neutral
+50               38.888889  36.111111  25.000000  Negative
+51               32.432432  32.972973  34.594595  Positive
+52               29.834254  33.701657  36.464088  Positive
+53               31.460674  30.337079  38.202247  Positive
+54               35.678392  27.135678  37.185930  Positive
+55               31.400966  36.714976  31.884058   Neutral
+56               34.272300  33.333333  32.394366  Negative
+57               28.787879  36.868687  34.343434   Neutral
+58               37.019231  27.403846  35.576923  Negative
+59               29.787234  34.574468  35.638298  Positive
+60               28.000000  32.500000  39.500000  Positive
+61               35.106383  31.914894  32.978723  Negative
+62               29.850746  34.825871  35.323383  Positive
+63               31.413613  38.219895  30.366492   Neutral
+64               38.071066  27.411168  34.517766  Negative
+65               32.352941  27.941176  39.705882  Positive
+66               31.891892  32.972973  35.135135  Positive
+67               35.567010  41.237113  23.195876   Neutral
+68               32.386364  31.818182  35.795455  Positive
+69               29.444444  37.777778  32.777778   Neutral
+70               29.479769  39.884393  30.635838   Neutral
+
+Gender
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Gender                                                    
+Female           33.202060  32.414420  34.383520  Positive
+Male             33.182504  33.574661  33.242836   Neutral
+Other            31.767139  34.456265  33.776596   Neutral
+
+Occupation
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Occupation                                                
+Professional     33.057851  32.073987  34.868162  Positive
+Retired          32.237370  34.843625  32.919006   Neutral
+Student          32.751092  34.259627  32.989281   Neutral
+Unemployed       32.788226  32.788226  34.423549  Positive
+
+Distance_Travelled(km)
+==================================================
+User_Experience          Negative    Neutral   Positive    Favors
+Distance_Travelled(km)                                           
+0.00                    16.666667  50.000000  33.333333   Neutral
+0.01                    43.750000  50.000000   6.250000   Neutral
+0.02                    52.631579  15.789474  31.578947  Negative
+0.03                    26.666667  40.000000  33.333333   Neutral
+0.04                    44.000000  20.000000  36.000000  Negative
+...                           ...        ...        ...       ...
+4.96                    27.777778  38.888889  33.333333   Neutral
+4.97                    23.076923  61.538462  15.384615   Neutral
+4.98                    11.764706  47.058824  41.176471   Neutral
+4.99                    53.846154  19.230769  26.923077  Negative
+5.00                    60.000000   0.000000  40.000000  Negative
+
+[501 rows x 4 columns]
+
+Weather
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Weather                                                   
+cloudy           33.074395  32.566477  34.359128  Positive
+rainy            33.051104  33.686120  33.262776   Neutral
+sunny            32.008368  34.219964  33.771668   Neutral
+
+Day_of_Week
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Day_of_Week                                               
+Friday           30.795610  34.842250  34.362140   Neutral
+Monday           34.620690  31.241379  34.137931  Negative
+Saturday         33.403657  34.247539  32.348805   Neutral
+Sunday           32.914046  34.171908  32.914046   Neutral
+Thursday         31.441048  33.770015  34.788937  Positive
+Tuesday          33.819444  32.291667  33.888889  Positive
+Wednesday        31.929825  33.894737  34.175439  Positive
+
+Time_of_Day
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Time_of_Day                                               
+afternoon        32.017720  32.742650  35.239629  Positive
+evening          32.628280  33.215825  34.155895  Positive
+morning          32.745098  34.470588  32.784314   Neutral
+night            33.471417  33.512842  33.015742   Neutral
+
+Temperature(C)
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Temperature(C)                                            
+10.0             23.529412  23.529412  52.941176  Positive
+10.1             38.297872  27.659574  34.042553  Negative
+10.2             29.268293  46.341463  24.390244   Neutral
+10.3             41.379310  27.586207  31.034483  Negative
+10.4             41.304348  30.434783  28.260870  Negative
+...                    ...        ...        ...       ...
+34.6             36.363636  29.545455  34.090909  Negative
+34.7             37.500000  27.500000  35.000000  Negative
+34.8             35.897436  41.025641  23.076923   Neutral
+34.9             33.333333  30.952381  35.714286  Positive
+35.0              4.545455  45.454545  50.000000  Positive
+
+[251 rows x 4 columns]
+
+Humidity(%)
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Humidity(%)                                               
+30               35.675676  34.054054  30.270270  Negative
+31               41.242938  25.988701  32.768362  Negative
+32               27.215190  32.911392  39.873418  Positive
+33               31.351351  35.135135  33.513514   Neutral
+34               29.651163  38.372093  31.976744   Neutral
+...                    ...        ...        ...       ...
+86               37.333333  28.666667  34.000000  Negative
+87               30.635838  35.260116  34.104046   Neutral
+88               25.433526  34.104046  40.462428  Positive
+89               31.097561  35.365854  33.536585   Neutral
+90               30.921053  28.289474  40.789474  Positive
+
+[61 rows x 4 columns]
+
+Is_Holiday
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Is_Holiday                                                
+False            32.595128  33.078317  34.326555  Positive
+True             32.823366  33.896285  33.280350   Neutral
+
+Is_Weekend
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Is_Weekend                                                
+False            32.975918  32.782563  34.241519  Positive
+True             32.359081  34.423568  33.217351   Neutral
+
+Purpose_of_Ride
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Purpose_of_Ride                                           
+Commute          32.603306  33.966942  33.429752   Neutral
+Errands          32.857143  32.857143  34.285714  Positive
+Exercise         32.850431  33.476899  33.672670  Positive
+Leisure          32.521947  33.679170  33.798883  Positive
+
+Satisfaction_Level(of 5)
+==================================================
+User_Experience            Negative    Neutral   Positive    Favors
+Satisfaction_Level(of 5)                                           
+1                         33.507853  33.246073  33.246073  Negative
+2                         31.460134  35.014409  33.525456   Neutral
+3                         32.788509  32.689450  34.522041  Positive
+4                         33.247688  33.556012  33.196300   Neutral
+5                         32.648067  32.892805  34.459129  Positive
+
+Helmet_Used
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Helmet_Used                                               
+False            32.721102  33.918946  33.359952   Neutral
+True             32.698858  33.059507  34.241635  Positive
+
+Traffic_Intensity(of 10)
+==================================================
+User_Experience            Negative    Neutral   Positive    Favors
+Traffic_Intensity(of 10)                                           
+1                         33.115061  31.898971  34.985968  Positive
+2                         31.974922  32.706374  35.318704  Positive
+3                         32.926829  33.130081  33.943089  Positive
+4                         31.048387  33.971774  34.979839  Positive
+5                         34.098019  35.036496  30.865485   Neutral
+6                         32.628399  34.441088  32.930514   Neutral
+7                         31.987578  32.712215  35.300207  Positive
+8                         30.339321  34.331337  35.329341  Positive
+9                         35.631068  32.427184  31.941748  Negative
+10                        33.206107  34.351145  32.442748   Neutral
+
+Road_Condition
+==================================================
+User_Experience   Negative    Neutral   Positive    Favors
+Road_Condition                                            
+Fair             33.925346  31.998796  34.075858  Positive
+Good             31.896552  34.304400  33.799049   Neutral
+Poor             32.317441  34.158117  33.524442   Neutral
+

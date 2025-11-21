@@ -66,3 +66,7 @@ Classification Report
     accuracy                           0.34      2000
    macro avg       0.34      0.33      0.32      2000
 weighted avg       0.34      0.34      0.32      2000
+
+Feature Importance
+==================================================
+This model type does not provide built-in feature importance.

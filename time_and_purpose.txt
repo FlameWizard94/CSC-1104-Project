@@ -1,0 +1,20 @@
+Time_of_Day × Purpose_of_Ride impact on User_Experience:
+============================================================
+User_Experience              Negative  Neutral  Positive    Favors
+Time_of_Day Purpose_of_Ride                                       
+afternoon   Commute             32.99    32.99     34.02  Positive
+            Errands             32.40    34.54     33.06   Neutral
+            Exercise            31.09    30.31     38.59  Positive
+            Leisure             31.69    33.23     35.08  Positive
+evening     Commute             31.75    32.70     35.55  Positive
+            Errands             30.86    32.22     36.91  Positive
+            Exercise            34.46    33.23     32.31  Negative
+            Leisure             33.50    34.81     31.69   Neutral
+morning     Commute             32.76    35.73     31.51   Neutral
+            Errands             32.73    32.40     34.88  Positive
+            Exercise            32.57    35.01     32.42   Neutral
+            Leisure             32.92    34.62     32.46   Neutral
+night       Commute             32.98    34.40     32.62   Neutral
+            Errands             35.45    32.35     32.20  Negative
+            Exercise            33.28    35.42     31.30   Neutral
+            Leisure             32.00    32.00     36.00  Positive
